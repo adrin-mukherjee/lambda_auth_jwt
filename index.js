@@ -76,7 +76,7 @@ exports.handler = async(event)=>{
     }
 };
 
-// secret-object = {key: "<secret key>", basic_creds: {username: "<uname>", password: "<passwd>"}}
+// secret-object = {key: "<secret key>", credentials: {username: "<uname>", password: "<passwd>"}}
 var validateClientID = async (region_code, clientID)=>{
     let request = new AWS.SecretsManager({region: region_code}).getSecretValue({SecretId: clientID}); 
     console.log("validateClientID- AWS request prepared");
