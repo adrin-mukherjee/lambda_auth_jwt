@@ -10,3 +10,7 @@
 - Validate Authorization Bearer (JWT) token using the secret key
 - Prepare Basic AuthN header value from the credentials with Base64 encoding
 - Create an IAM policy document with a response context to pass Basic AuthN header value to the back-end
+
+### Expected structure of secret object
+- {key: "[secret key to validate JWT token]", credentials: {username: "[user]", password: "[pass]"}}
+  
